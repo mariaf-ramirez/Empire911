@@ -1,116 +1,167 @@
 * {
-margin: 0;
-padding:0;
-box-sizing:border-box;
-Font.family:Arial, Helvetica, sans-serif;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
- background: #0d0d0d;
-color: white;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: white;
 }
 
+
 .titulo {
- text-align: center;
-padding: 40px 20px;
-background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #4B0082, #D4AF37, #B4B4B4);
 }
 
 .titulo h1 {
-font-size: 40px;
-letter-spacing: 3px;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .titulo p {
-margin-top: 10px;
-color: #b4b4b4;
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
+
 .filtros {
-display: flex;
-justify-content: center;
-gap: 15px;
-padding: 20px;
-background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: #111;
 }
 
 .filtros select,
 .filtros input {
-padding: 10px;
-border-radius: 8px;
-border: none;
-outline: none;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    min-width: 180px;
 }
+
 
 .contenedor-autos {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 20px;
-padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    align-items: stretch;
+
 }
 
-/* ===== CARD ===== */
+
 .card {
-background: #1a1a1a;
-border-radius: 15px;
-overflow: hidden;
-box-shadow: 0 0 15px rgba(0,0,0,0.6);
-transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+   height: 100%;
+}
+
+.info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.btn-detalles {
+    margin-top: auto;
+
 }
 
 .card:hover {
-transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
+    border-image: linear-gradient(90deg, #FF8700, #FFD300, #39FF14) 1;
 }
 
 
 .card img {
-width: 100%;
-height: 200px;
-object-fit: cover;
-background: #222;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
+
 .estado {
-display: inline-block;
-background: #39ff14;
-color: black;
-padding: 5px 10px;
-margin: 10px;
-border-radius: 5px;
-font-weight: bold;
+    display: inline-block;
+    background: #39FF14;
+    color: black;
+    padding: 6px 12px;
+    margin: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 
 .info {
- padding: 15px;
+    padding: 18px;
 }
 
 .info h2 {
-font-size: 20px;
-margin-bottom: 10px;
-color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: #FFD700;
 }
 
 .info p {
-font-size: 13px;
-margin: 3px 0;
-color: #cfcfcf;
+    margin-bottom: 8px;
+    color: #d1d1d1;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-button {
-margin-top: 10px;
-padding: 10px;
-width: 100%;
-border: none;
-border-radius: 10px;
-cursor: pointer;
-background: linear-gradient(90deg, #ff8700, #ffd300);
-color: black;
-font-weight: bold;
-transition: 0.3s;
+
+.btn-detalles {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #FF8700, #FFD300);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-button:hover {
-transform: scale(1.05);
+.btn-detalles:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #39FF14, #FFD300);
+}
+
+.detalles {
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+    .contenedor-autos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor-autos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-autos {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo h1 {
+        font-size: 2rem;
+    }
 }
