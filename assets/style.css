@@ -23,6 +23,7 @@ align-items:center;
 padding: 15px 30px;
 background: #0A0A0A;
 border-bottom:1px solid #0A0A0A;
+border-bottom-color: white;
 }
 
 .menu{
@@ -107,7 +108,7 @@ background-position:right center;
 
 .contenido-inicio{
     max-width: 500px;
-    margin-left: -20px;
+    margin-left: -40px;
     margin-top: -30px;
     position:relative;
     z-index: 1;
@@ -120,7 +121,7 @@ background-position:right center;
     left: 0;
     width: 38%;
     height: 34%;
-    background: rgba(10, 10, 10, 0.3);
+    /*background: rgba(10, 10, 10, 0.3);*/
     z-index: 1;
     margin-left: 20px;
 }

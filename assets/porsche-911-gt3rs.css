@@ -1,0 +1,160 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0A0A0A;
+color:#fff;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* SECCION DETALLE */
+
+.detalle-auto{
+padding: 10px 60px;
+}
+
+.volver{
+margin-bottom:25px;
+}
+
+.volver a{
+display:inline-flex;
+align-items:center;
+gap:8px;
+color:#D0A052;
+text-decoration:none;
+font-weight:bold;
+font-family: monospace;
+font-size: 16px;
+}
+
+.volver img{
+width: 20px;
+height: auto;
+}
+
+/* GRID PRINCIPAL */
+
+.contenedor-detalle{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:60px;
+align-items:start;
+}
+
+/* GALERIA */
+
+.zoom-contenedor{
+overflow:hidden;
+border-radius:15px;
+border:2px solid #D0A052;
+}
+
+.imagen-principal{
+width:100%;
+display:block;
+transition:transform .4s ease;
+}
+
+.zoom-contenedor:hover .imagen-principal{
+transform:scale(1.15);
+}
+
+/* MINIATURAS */
+
+.miniaturas{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.miniaturas img{
+width:120px;
+height:80px;
+object-fit:cover;
+border:2px solid #D0A052;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.miniaturas img:hover{
+transform:scale(1.05);
+}
+
+/* BOTON WHATSAPP */
+
+.boton-whatsapp{
+display:inline-flex;
+align-items: center;
+gap: 8px;
+margin-top:20px;
+background:#D0A052;
+color:#000;
+padding: 10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-family: monospace;
+font-size: 16px;
+}
+
+.boton-whatsapp:hover{
+background:#c49345;
+transform: translateY(-2px);
+transition: 0.2s;
+}
+
+.boton-whatsapp img{
+    width: 25px;
+    height: auto;
+}
+
+/* INFO AUTO */
+
+.info-auto h1{
+color:#D0A052;
+margin-bottom:20px;
+letter-spacing:2px;
+font-family: monospace;
+font-size: 35px;
+}
+
+.datos-auto{
+list-style:none;
+margin-bottom:30px;
+}
+
+.datos-auto li{
+margin-bottom:8px;
+font-size: 15px;
+font-family: monospace;
+}
+
+.datos-auto span{
+color:#D0A052;
+font-weight:bold;
+margin-right:10px;
+font-family: monospace;
+font-size: 16px;
+}
+
+.info-auto h2{
+color:#D0A052;
+margin-bottom:10px;
+font-family: monospace;
+font-size: 25px;
+}
+
+.info-auto p{
+line-height:1.6;
+color:#ccc;
+font-family: monospace;
+font-size: 14px;
+}
+

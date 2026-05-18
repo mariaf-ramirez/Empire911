@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche 911 GT3 RS | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="img/left-gold.png" alt="" /> VOLVER AL CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img/Porsche 911 GT3 RS - gold - 1.png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img/Porsche 911 GT3 RS - gold - 1.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img src="img/GT3 RS de frente - gold.png" onclick="cambiarImagen(this)" />
+            <img
+              src="img/GT3 RS parte trasera - gold.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img/GT3 RS por adentro - gold.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+            <a class="boton-whatsapp"
+              href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Porsche%20911%20GT3%20RS"
+            >
+              <img src="img/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+              WhatsApp
+            </a>
+        </div>
+
+
+        <div class="info-auto">
+          <h1>PORSCHE 911 GT3 RS</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2023</li>
+            <li><span>Marca:</span> Porsche</li>
+            <li><span>Modelo:</span> 911 GT3 RS</li>
+            <li><span>Color:</span> Dorado Metallic Gold</li>
+            <li><span>Precio:</span> $1.200.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Bogotá, Colombia</li>
+            <li><span>Kilometraje:</span> 5.200 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Gasolina</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Porsche 911 GT3 RS representa la máxima expresión de ingeniería
+            deportiva enfocada en pista. Equipado con un motor bóxer atmosférico
+            de 4.0 litros que desarrolla 525 HP, incorpora aerodinámica activa
+            inspirada en el automovilismo, suspensión de alto rendimiento y
+            tecnología diseñada para ofrecer una experiencia de conducción
+            extrema, precisa y emocionante.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
