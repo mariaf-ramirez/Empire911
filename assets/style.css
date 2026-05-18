@@ -101,7 +101,7 @@ height:80vh;
 display:flex;
 align-items:center;
 padding-left:80px;
-background-image:url("../img/Porsche\ 911\ GT3\ RS\ -\ gold.png");
+background-image:url("../img-autos/Porsche\ 911\ GT3\ RS\ -\ gold.png");
 background-size:cover;
 background-position:right center;
 }
@@ -121,7 +121,6 @@ background-position:right center;
     left: 0;
     width: 38%;
     height: 34%;
-    /*background: rgba(10, 10, 10, 0.3);*/
     z-index: 1;
     margin-left: 20px;
 }
