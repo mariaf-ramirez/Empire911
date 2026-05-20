@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="assets/sobre-nosotros.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="sobre">
+
+    <div class="contenido">
+
+        <!-- TEXTO -->
+        <div class="texto">
+
+            <h1>SOBRE <br> EMPIRE 911</h1>
+
+            <p>
+                En Empire 911 nos especializamos en ofrecer los mejores
+                autos de lujo y alto rendimiento. Seleccionamos cada vehículo
+                con los más altos estándares de calidad, para brindarte
+                exclusividad, confianza y pasión por los automóviles.
+            </p>
+
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="imagen">
+
+            <img src="img-autos/img-sobreNosotros.png" alt="Auto de lujo"> 
+
+        </div>
+
+    </div>
+
+    <!-- TARJETAS -->
+    <div class="estadisticas">
+
+        <div class="card">
+            <img src="iconos/car-sport-gold.png" alt="Icono auto">
+            <h2>50+</h2>
+            <p>AUTOS VENDIDOS</p>
+        </div>
+
+        <div class="card">
+            <img src="iconos/users-gold.png" alt="Icono usuarios">
+            <h2>100%</h2>
+            <p>CLIENTES SATISFECHOS</p>
+        </div>
+
+        <div class="card">
+            <img src="iconos/clock-shield-gold.png" alt="Icono reloj">
+            <h2>5 AÑOS</h2>
+            <p>DE EXPERIENCIA</p>
+        </div>
+
+        <div class="card">
+            <img src="iconos/shield-star-gold.png" alt="Icono escudo">
+            <h2>PREMIUM</h2>
+            <p>CALIDAD GARANTIZADA</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    fetch("navbar.html")
+    .then( (response) => response.text())
+    .then( (data) => {
+        document.getElementById("navbar").innerHTML = data; 
+    });
+</script>
+
+</body>
+</html>
