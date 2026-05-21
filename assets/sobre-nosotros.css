@@ -10,11 +10,11 @@ body{
 }
 
 .sobre{
-    width: 90%;
+    width: 100%;
     margin: 40px auto;
     background: black;
     color: white;
-    padding: 50px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
 }
@@ -28,6 +28,7 @@ body{
 
 .texto{
     width: 45%;
+    margin-left: 60px;
 }
 
 .texto h1{
@@ -44,24 +45,24 @@ body{
 }
 
 .imagen{
-    width: 50%;
+    width: 60%;
     text-align: center;
 }
 
 .imagen img{
-    width: 100%;
-    max-width: 600px;
+    width: 110%;
+    max-width: 700px;
 }
 
 .estadisticas{
-    margin-top: 50px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     border: 1px solid #d4a24c;
 }
 
 .card{
-    padding: 40px 20px;
+    padding: 20px 10px;
     text-align: center;
     border-right: 1px solid #d4a24c;
 
@@ -76,18 +77,18 @@ body{
 }
 
 .card img{
-    width: 90px;
+    width: 60px;
     height: auto;
     margin-bottom: 20px;
 }
 
-.card h2{
+.card h4{
     color: #d4a24c;
     margin-bottom: 10px;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .card p{
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 2px;
 }
