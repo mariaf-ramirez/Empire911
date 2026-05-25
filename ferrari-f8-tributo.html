@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferrari F8 Tributo | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Ferrari F8 Tributo .png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Ferrari F8 Tributo .png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari F8 de frente - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari F8 parte trasera - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari F8 por dentro - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Ferrari%20F8%20Tributo"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>FERRARI F8 TRIBUTO</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span>2021</li>
+            <li><span>Marca:</span> Ferrari</li>
+            <li><span>Modelo:</span> F8 Tributo</li>
+            <li><span>Color:</span> Amarillo Giallo Modena</li>
+            <li><span>Precio:</span> $2.100.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Milán, Italia</li>
+            <li><span>Kilometraje:</span> 9.000 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Gasolina</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Ferrari F8 Tributo es un homenaje al legendario motor V8 de
+            Ferrari. Equipado con un motor V8 biturbo de 3.9 litros que produce
+            720 caballos de fuerza, ofrece un rendimiento impresionante con una
+            aceleración de 0 a 100 km/h en menos de 3 segundos. Su diseño
+            aerodinámico optimizado y su tecnología avanzada garantizan un
+            equilibrio perfecto entre velocidad, control y emoción al conducir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

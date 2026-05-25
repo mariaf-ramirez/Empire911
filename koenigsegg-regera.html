@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koenigsegg Regera | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Koenigsegg Regera.png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Koenigsegg Regera.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Regera de frente - silver.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Regera parte trasera - silver.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Regera por dentro - silver.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Koenigsegg%20Regera"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>KOENIGSEGG REGERA</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2022</li>
+            <li><span>Marca:</span> Koenigsegg</li>
+            <li><span>Modelo:</span> Regera</li>
+            <li><span>Color:</span> Plata Liquid Metal Silver</li>
+            <li><span>Precio:</span> $12.000.000.000 COP</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Miami, Estados Unidos</li>
+            <li><span>Kilometraje:</span> 2.100 km</li>
+            <li>
+              <span>Transmisión:</span> Direct Drive (Monocapa / 1 velocidad)
+            </li>
+            <li><span>Combustible:</span> Híbrido Enchufable (PHEV)</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Koenigsegg Regera es un hypercar híbrido diseñado para combinar
+            potencia extrema con lujo y confort. Cuenta con un motor V8 biturbo
+            acompañado de tres motores eléctricos que juntos producen más de
+            1500 caballos de fuerza. Su innovador sistema Koenigsegg Direct
+            Drive elimina la transmisión tradicional, proporcionando una entrega
+            de potencia directa, sin pérdidas de energía y extremadamente
+            eficiente. Este vehículo destaca por su tecnología revolucionaria y
+            su diseño elegante
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
