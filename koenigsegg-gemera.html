@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koenigsegg Gemera | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Koenigsegg Gemera .png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Koenigsegg Gemera .png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Gemera de frente - black.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Gemera parte trasera - black.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Gemera por dentro - black.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Koenigsegg%20Gemera"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>KOENIGSEGG GEMERA</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2023</li>
+            <li><span>Marca:</span> Koenigsegg</li>
+            <li><span>Modelo:</span> Gemera</li>
+            <li><span>Color:</span> Negro Carbon Black</li>
+            <li><span>Precio:</span> $13.200.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Estocolmo, Suecia</li>
+            <li><span>Kilometraje:</span> 1.200 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Híbrido</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Koenigsegg Gemera redefine el concepto de hypercar al ofrecer
+            cuatro plazas sin sacrificar rendimiento extremo. Combina un
+            innovador motor de combustión con tres motores eléctricos para
+            generar más de 1700 caballos de fuerza. Este sistema híbrido permite
+            una aceleración impresionante y una eficiencia sorprendente para un
+            vehículo de su categoría. Además, su interior de lujo y tecnología
+            avanzada lo convierten en uno de los hypercars más exclusivos del
+            mercado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

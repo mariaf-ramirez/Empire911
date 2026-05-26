@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koenigsegg Jesko | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Koenigsegg Jesko.png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Koenigsegg Jesko.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Jesko de frente - orange.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Jesko parte trasera - orange.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Koenigsegg Jesko por dentro - orange.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Koenigsegg%20Jesko"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>KOENIGSEGG JESKO</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2024</li>
+            <li><span>Marca:</span> Koenigsegg</li>
+            <li><span>Modelo:</span> Jesko</li>
+            <li><span>Color:</span> Naranja Tang Orange Pearl</li>
+            <li><span>Precio:</span> $14.500.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Dubái, Emiratos Árabes</li>
+            <li><span>Kilometraje:</span> 900 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Gasolina</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Koenigsegg Jesko es uno de los hypercars más avanzados y
+            exclusivos del mundo. Equipado con un motor V8 biturbo de 5.0
+            litros, puede producir hasta 1600 caballos de fuerza cuando utiliza
+            combustible E85. Su transmisión Light Speed Transmission (LST)
+            permite cambios de marcha extremadamente rápidos, mientras que su
+            aerodinámica activa está diseñada para alcanzar velocidades
+            superiores a los 480 km/h. Cada unidad del Jesko es fabricada con
+            precisión artesanal y tecnología de competición.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

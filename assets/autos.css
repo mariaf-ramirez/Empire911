@@ -6,64 +6,93 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    background: #0d0d0d;
     color: white;
 }
 
-
+/* TITULO */
 .titulo {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(90deg, #4B0082, #D4AF37, #B4B4B4);
 }
 
 .titulo h1 {
-    font-size: 3rem;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    font-size: 40px;
+    color: #d4af37;
+    letter-spacing: 3px;
 }
 
 .titulo p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    color: #b4b4b4;
 }
 
-
+/* FILTROS */
 .filtros {
     display: flex;
     justify-content: center;
     gap: 15px;
     padding: 20px;
     flex-wrap: wrap;
-    background: #111;
 }
 
 .filtros select,
 .filtros input {
+    background: #111;
+    color: white;
+    border: 1px solid #d4af37;
     padding: 12px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
+    border-radius: 5px;
     min-width: 180px;
 }
 
+.filtros input::placeholder {
+    color: #aaa;
+}
 
+/* CONTENEDOR */
 .contenedor-autos {
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 30px;
-    align-items: stretch;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 20px ;
+    width: 95%;
+    margin: auto
 
 }
 
-
+/* TARJETAS */
 .card {
+    background: #b4b4b4;
     display: flex;
     flex-direction: column;
-   height: 100%;
+    overflow: hidden;
+    transition: .3s ease;
+    border: 1px solid #222;
 }
 
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #555;
+}
+
+/* ESTADO */
+.estado {
+    text-align: right;
+    padding: 10px 15px 0;
+    font-weight: bold;
+    color: #39FF14;
+    font-size: 13px;
+}
+
+/* INFO */
 .info {
     padding: 18px;
     display: flex;
@@ -71,97 +100,31 @@ body {
     flex-grow: 1;
 }
 
-.btn-detalles {
-    margin-top: auto;
-
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-image: linear-gradient(90deg, #FF8700, #FFD300, #39FF14) 1;
-}
-
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-
-.estado {
-    display: inline-block;
-    background: #39FF14;
-    color: black;
-    padding: 6px 12px;
-    margin: 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-.info {
-    padding: 18px;
-}
-
 .info h2 {
-    margin-bottom: 12px;
-    font-size: 1.4rem;
-    color: #FFD700;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
 }
 
 .info p {
     margin-bottom: 8px;
-    color: #d1d1d1;
-    font-size: 14px;
-    line-height: 1.5;
+    color: #2e2e2e;
 }
 
-
+/* BOTON */
 .btn-detalles {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #FF8700, #FFD300);
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
     margin-top: auto;
-    font-size: 15px;
-    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    border-radius: 13px;
+    font-weight: bold;
+    transition: .3s;
 }
 
 .btn-detalles:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, #39FF14, #FFD300);
-}
-
-.detalles {
-    display: none;
-}
-
-
-@media (max-width: 1200px) {
-    .contenedor-autos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .contenedor-autos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .contenedor-autos {
-        grid-template-columns: 1fr;
-    }
-
-    .titulo h1 {
-        font-size: 2rem;
-    }
+    background: #d4af37;
+    color: black;
 }

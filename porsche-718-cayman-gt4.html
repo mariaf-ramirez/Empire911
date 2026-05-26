@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche 718 Cayman GT4 | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Porsche 718 Cayman GT4 .png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Porsche 718 Cayman GT4 .png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Porsche 718 de frente - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Porsche 718 parte trasera - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Porsche 718 por dentro - yellow.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Porsche%20718%20Cayman%20GT4"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>PORSCHE 718 CAYMAN GT4</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2022</li>
+            <li><span>Marca:</span> Porsche</li>
+            <li><span>Modelo:</span> 718 Cayman GT4</li>
+            <li><span>Color:</span> Amarillo Racing Yellow</li>
+            <li><span>Precio:</span> $620.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Cali, Colombia</li>
+            <li><span>Kilometraje:</span> 8.700 km</li>
+            <li><span>Transmisión:</span> Manual</li>
+            <li><span>Combustible:</span> Gasolina</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Porsche 718 Cayman GT4 es un coupé deportivo diseñado para
+            ofrecer una experiencia de conducción pura y emocionante. Está
+            impulsado por un motor bóxer atmosférico de 4.0 litros que produce
+            alrededor de 420 caballos de fuerza, ofreciendo una respuesta
+            inmediata y un sonido característico. Su chasis optimizado para
+            pista, junto con una suspensión deportiva y aerodinámica avanzada,
+            permite un control excepcional en curvas y altas velocidades. Es un
+            vehículo pensado para los verdaderos entusiastas de la conducción
+            deportiva.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

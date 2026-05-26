@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche Taycan Turbo S | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Porsche Taycan Turbo S.png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Porsche Taycan Turbo S.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Turbo S de frente - white.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Turbo S parte trasera - white.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Turbo S por dentro - white.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Porsche%20Taycan%20Turbo%20S"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>PORSCHE TAYCAN TURBO S</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2024</li>
+            <li><span>Marca:</span> Porsche</li>
+            <li><span>Modelo:</span> Taycan Turbo S</li>
+            <li><span>Color:</span> Blanco Carrara White Metallic</li>
+            <li><span>Precio:</span> $980.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Medellín, Colombia</li>
+            <li><span>Kilometraje:</span> 3.100 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Eléctrico</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Porsche Taycan Turbo S representa la nueva generación de
+            vehículos eléctricos de alto rendimiento. Equipado con dos motores
+            eléctricos y tracción total, es capaz de generar hasta 761 caballos
+            de fuerza con el sistema Overboost. Su aceleración de 0 a 100 km/h
+            en aproximadamente 2.8 segundos lo convierte en uno de los sedanes
+            eléctricos más rápidos del mundo. Además, su diseño futurista,
+            interior tecnológico y sistema de carga rápida lo posicionan como
+            una combinación perfecta entre lujo, innovación y deportividad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

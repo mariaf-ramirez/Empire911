@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferrari SF90 Stradale | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Ferrari SF90 Stradale .png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Ferrari SF90 Stradale .png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari SF90 de frente - pink.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari SF90 parte trasera - pink.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Ferrari SF90 por dentro - pink.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Ferrari%20SF90%20Stradale"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>FERRARI SF90 STRADALE</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2023</li>
+            <li><span>Marca:</span> Ferrari</li>
+            <li><span>Modelo:</span> SF90 Stradale</li>
+            <li><span>Color:</span> Rosado fibra de carbono</li>
+            <li><span>Precio:</span> $3.200.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Bogotá, Colombia</li>
+            <li><span>Kilometraje:</span> 4.500 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Híbrido</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Ferrari SF90 Stradale es el primer superdeportivo híbrido
+            enchufable de Ferrari. Combina un motor V8 biturbo con tres motores
+            eléctricos para generar una potencia total cercana a los 1000
+            caballos de fuerza. Este impresionante sistema permite una
+            aceleración de 0 a 100 km/h en apenas 2.5 segundos. Su diseño
+            aerodinámico, tecnología avanzada y tracción total lo convierten en
+            uno de los Ferrari más innovadores jamás creados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
