@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title> Empire 911_autos </title>
-
+  <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/autos.css">
 </head>
 
 
 <body>
-
+<div id="navbar"></div>
   <section class="titulo">
 
     <h1> CATALOGO DE AUTOS </h1>
@@ -51,7 +51,7 @@
 
 <div class="card">
 
-  <img src="img-autos/Porsche 911 GT3 RS - gold.png" alt="Porsche 911 GT3 RS">
+  <img src="img-autos/Porsche 911 GT3 RS - gold - 1.png" alt="Porsche 911 GT3 RS">
   <span class="estado"> Disponible </span>
 
   <div class="info">
@@ -134,7 +134,7 @@
 
 <div class="card">
 
-  <img src="img-autos/Koenigsegg Regera .png" alt="Koenigsegg Regera         ">
+  <img src="img-autos/Koenigsegg Regera.png" alt="Koenigsegg Regera         ">
   <span class="estado"> Disponible </span>
 
   <div class="info">
@@ -334,5 +334,38 @@
 </div> 
 
 </section>
+<script>
+    
+fetch("navbar.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("navbar").innerHTML = data;
+
+    const enlaces = document.querySelectorAll(".enlace-rebelde");
+
+    let paginaActual = window.location.pathname;
+
+    enlaces.forEach(enlace => {
+
+        const href = enlace.getAttribute("href");
+
+        if (paginaActual.includes(href)) {
+            enlace.parentElement.classList.add("activo");
+        }
+
+        // caso especial para inicio
+        if (
+            (paginaActual.endsWith("/") || paginaActual.includes("index.html"))
+            && href === "index.html"
+        ) {
+            enlace.parentElement.classList.add("activo");
+        }
+
+    });
+
+});
+
+</script>
 </body>
 </html>

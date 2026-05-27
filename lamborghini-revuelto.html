@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamborghini Revuelto | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/Lamborghini Revuelto .png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/Lamborghini Revuelto .png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Lamborghini Revuelto de frente - grey.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Lamborghini Revuelto parte trasera - grey.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/Lamborghini Revuelto por dentro - grey.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20Lamborghini%20Revuelto"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>LAMBORGHINI REVUELTO</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2024</li>
+            <li><span>Marca:</span> Lamborghini</li>
+            <li><span>Modelo:</span> Revuelto</li>
+            <li><span>Color:</span> Gris Grigio Hati</li>
+            <li><span>Precio:</span> $4.200.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Roma, Italia</li>
+            <li><span>Kilometraje:</span> 1.100 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Híbrido</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El Lamborghini Revuelto marca el inicio de la era híbrida para la
+            marca italiana. Combina un potente motor V12 atmosférico con tres
+            motores eléctricos para generar más de 1000 caballos de fuerza. Este
+            sistema híbrido permite una aceleración explosiva y un rendimiento
+            impresionante. Su diseño futurista y tecnología avanzada lo
+            convierten en uno de los superdeportivos más innovadores de
+            Lamborghini.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

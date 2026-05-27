@@ -68,7 +68,12 @@ body {
     flex-direction: column;
     overflow: hidden;
     transition: .3s ease;
+<<<<<<< HEAD
     border: 1px solid black;
+=======
+    border: 1px solid #222;
+    border-radius: 10px;
+>>>>>>> 35094df5215418ac264757095fba038b27dd1045
 }
 
 .card:hover {
@@ -80,7 +85,12 @@ body {
     width: 100%;
     height: 190px;
     object-fit: cover;
+<<<<<<< HEAD
     background: black;
+=======
+    background: #555;
+    border-radius: 5px 5px 0 0;
+>>>>>>> 35094df5215418ac264757095fba038b27dd1045
 }
 
 /* ESTADO */

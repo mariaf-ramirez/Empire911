@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW i8 | Empire 911</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/porsche-911-gt3rs.css" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <section class="detalle-auto">
+      <div class="volver">
+        <a href="autos.html"
+          ><img src="iconos/left-gold.png" alt="left-gold" /> VOLVER AL
+          CATÁLOGO</a
+        >
+      </div>
+
+      <div class="contenedor-detalle">
+        <div>
+          <div class="zoom-contenedor">
+            <img
+              id="imagenPrincipal"
+              src="img-autos/BMW i8.png"
+              class="imagen-principal"
+            />
+          </div>
+
+          <div class="miniaturas">
+            <img
+              src="img-autos/BMW i8.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/BMW i8 de frente - blue.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/BMW i8 parte trasera - blue.png"
+              onclick="cambiarImagen(this)"
+            />
+            <img
+              src="img-vistaDetalles/BMW i8 por dentro - blue.png"
+              onclick="cambiarImagen(this)"
+            />
+          </div>
+
+          <a
+            class="boton-whatsapp"
+            href="https://wa.me/573506299346?text=Hola%20estoy%20interesado%20en%20el%20BMW%20i8"
+          >
+            <img src="iconos/whatsapp-black.png" alt="WhatsApp" /> Contactar por
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="info-auto">
+          <h1>BMW I8</h1>
+
+          <ul class="datos-auto">
+            <li><span>Año:</span> 2021</li>
+            <li><span>Marca:</span> BMW</li>
+            <li><span>Modelo:</span> i8</li>
+            <li><span>Color:</span> Azul Protonic Blue</li>
+            <li><span>Precio:</span> $650.000.000</li>
+            <li><span>Estado:</span> Disponible</li>
+            <li><span>Ubicación:</span> Berlín, Alemania</li>
+            <li><span>Kilometraje:</span> 12.000 km</li>
+            <li><span>Transmisión:</span> Automática</li>
+            <li><span>Combustible:</span> Híbrido</li>
+          </ul>
+
+          <h2>DESCRIPCIÓN</h2>
+
+          <p>
+            El BMW i8 es un deportivo híbrido que destaca por su diseño
+            futurista y su tecnología innovadora. Combina un motor de combustión
+            con un motor eléctrico para ofrecer una conducción eficiente y
+            deportiva al mismo tiempo. Su estructura ligera de fibra de carbono
+            y su diseño aerodinámico lo convierten en uno de los vehículos más
+            distintivos de BMW.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function cambiarImagen(imagen) {
+        document.getElementById("imagenPrincipal").src = imagen.src;
+      }
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
