@@ -68,15 +68,15 @@
             <!-- DERECHA -->
             <div class="formulario">
 
-                <form>
+                <form id="formulario-contacto">
 
-                    <input type="text" placeholder="Nombre completo">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
 
-                    <input type="email" placeholder="Correo electrónico">
+                    <input type="email" id="correo" placeholder="Correo electrónico" required>
 
-                    <input type="text" placeholder="Teléfono">
+                    <input type="text" id="telefono" placeholder="Teléfono" required>
 
-                    <textarea placeholder="Mensaje"></textarea>
+                    <textarea id="mensaje" placeholder="Mensaje" required></textarea>
 
                     <button type="submit">
                         ENVIAR MENSAJE
@@ -91,10 +91,8 @@
 
     </section>
 
-    <!-- NAVBAR DINAMICO -->
-    <script>
 
-       
+    <script>
 fetch("navbar.html")
 .then(response => response.text())
 .then(data => {
@@ -113,7 +111,6 @@ fetch("navbar.html")
             enlace.parentElement.classList.add("activo");
         }
 
-        // caso especial para inicio
         if (
             (paginaActual.endsWith("/") || paginaActual.includes("index.html"))
             && href === "index.html"
@@ -124,9 +121,18 @@ fetch("navbar.html")
     });
 
 });
+</script>
 
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    </script>
+<script>
+  emailjs.init("GhaxAz2AtHbBEhm_Y");
+</script>
+
+<!-- Tu JS -->
+<script src="js/contacto.js"></script>
+    
 
 </body>
 
