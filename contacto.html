@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Empire 911</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- CSS CONTACTO -->
+    <link rel="stylesheet" href="assets/contacto.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- CONTACTO -->
+    <section class="contacto">
+
+        <h1>CONTÁCTANOS</h1>
+
+        <div class="contenido-contacto">
+
+            <!-- IZQUIERDA -->
+            <div class="info-contacto">
+
+                <h2>
+                    ¿TIENES DUDAS O QUIERES
+                    VENDER TU AUTO CON NOSOTROS?
+                </h2>
+
+                <p>
+                    Escríbenos y con gusto te asesoraremos.
+                </p>
+
+                <div class="dato">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>+57 350 6299346</span>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@empire911</span>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>info@empire911.com</span>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Cúcuta, Colombia</span>
+                </div>
+
+            </div>
+
+            <!-- DERECHA -->
+            <div class="formulario">
+
+                <form>
+
+                    <input type="text" placeholder="Nombre completo">
+
+                    <input type="email" placeholder="Correo electrónico">
+
+                    <input type="text" placeholder="Teléfono">
+
+                    <textarea placeholder="Mensaje"></textarea>
+
+                    <button type="submit">
+                        ENVIAR MENSAJE
+                    </button>
+
+                </form>
+
+            </div>
+             </div>
+
+        </div>
+
+    </section>
+
+    <!-- NAVBAR DINAMICO -->
+    <script>
+
+        fetch("navbar.html")
+
+        .then((response) => response.text())
+
+        .then((data) => {
+
+            document.getElementById("navbar").innerHTML = data;
+
+        });
+
+    </script>
+
+</body>
+
+</html>
