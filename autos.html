@@ -335,11 +335,37 @@
 
 </section>
 <script>
-    fetch("navbar.html")
-    .then( (response) => response.text())
-    .then( (data) => {
-        document.getElementById("navbar").innerHTML = data; 
+    
+fetch("navbar.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("navbar").innerHTML = data;
+
+    const enlaces = document.querySelectorAll(".enlace-rebelde");
+
+    let paginaActual = window.location.pathname;
+
+    enlaces.forEach(enlace => {
+
+        const href = enlace.getAttribute("href");
+
+        if (paginaActual.includes(href)) {
+            enlace.parentElement.classList.add("activo");
+        }
+
+        // caso especial para inicio
+        if (
+            (paginaActual.endsWith("/") || paginaActual.includes("index.html"))
+            && href === "index.html"
+        ) {
+            enlace.parentElement.classList.add("activo");
+        }
+
     });
+
+});
+
 </script>
 </body>
 </html>
