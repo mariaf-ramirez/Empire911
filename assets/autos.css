@@ -18,7 +18,7 @@ body {
 
 .titulo h1 {
     font-size: 40px;
-    color: #d4af37;
+    color: #D0A052;
     letter-spacing: 3px;
 }
 
@@ -40,7 +40,7 @@ body {
 .filtros input {
     background: #111;
     color: white;
-    border: 1px solid #d4af37;
+    border: 1px solid #D0A052;
     padding: 12px;
     border-radius: 5px;
     min-width: 180px;
@@ -127,14 +127,14 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 10px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
+    border: 1px solid #D0A052;
+    color: #D0A052;
     border-radius: 13px;
     font-weight: bold;
     transition: .3s;
 }
 
 .btn-detalles:hover {
-    background: #d4af37;
+    background: #D0A052;
     color: black;
 }
