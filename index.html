@@ -18,7 +18,7 @@
     <div id="app">
 
 
-<div id="navbar"></div>
+<div id="navbar"></div> //trae el mismo diseño en diferentes paginas
   <section class="inicio">
     <div class="overlay-inicio"></div>
     <div class="contenido-inicio">
@@ -78,22 +78,22 @@
 
     <script>
 
-fetch("navbar.html")
+fetch("navbar.html") //solicita info
 .then(response => response.text())
 .then(data => {
 
     document.getElementById("navbar").innerHTML = data;
 
-    const enlaces = document.querySelectorAll(".enlace-rebelde");
+    const enlaces = document.querySelectorAll(".enlace-rebelde"); //guarda elementos en enlaces
 
-    let paginaActual = window.location.pathname;
+    let paginaActual = window.location.pathname; //obten ruta de pag en la que estoy actualmente y guardar
 
-    enlaces.forEach(enlace => {
+    enlaces.forEach(enlace => { //hace algo con cada uno de los enlaces
 
-        const href = enlace.getAttribute("href");
+        const href = enlace.getAttribute("href"); //obten el valor del atributo "href"
 
         if (paginaActual.includes(href)) {
-            enlace.parentElement.classList.add("activo");
+            enlace.parentElement.classList.add("activo"); //"/autos.html", contiene "autos.html"?
         }
 
         // caso especial para inicio
