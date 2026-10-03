@@ -11,45 +11,45 @@
   <link rel="stylesheet" href="assets/autos.css">
 </head>
 
-
 <body>
-<div id="navbar"></div>
+    <div id="navbar"></div>
+
   <section class="titulo">
 
     <h1> CATALOGO DE AUTOS </h1>
 
     <p> Descubre el vehículo perfecto para acompañarte en todos tus viajes. </p>
 
+
   </section>
 
   <section class="filtros">
 
-    <select>
-      <option>Marca </option>
-      <option>BMW </option>
-      <option>Ferrari </option>
-      <option>Koenigsegg </option>
-      <option>Lamborghini </option>
-      <option>McLaren </option>
-      <option>Porsche</option>
+    <select id= "filtromarca">
+      <option value= "">Marca </option>
+    <option value="BMW">BMW</option>
+    <option value="Ferrari">Ferrari</option>
+    <option value="Koenigsegg">Koenigsegg</option>
+    <option value="Lamborghini">Lamborghini</option>
+    <option value="McLaren">McLaren</option>
+    <option value="Porsche">Porsche</option>
 
     </select>
 
-    <select>
-      <option>Año</option>
-      <option> 2023</option>
-      <option>2022</option>
-      <option>2021</option>
+    <select id= "filtroaño">
+      <option value="">Año</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
     </select>
 
-    <input type="text" placeholder="buscar autos">
+    <input type="text" id="buscador" placeholder="buscar autos">
   </section>
 
   <section class="contenedor-autos">
 
-
-
-<div class="card">
+<div class="card" data-marca="Porsche" data-año="2023">
 
   <img src="img-autos/Porsche 911 GT3 RS - gold - 1.png" alt="Porsche 911 GT3 RS">
   <span class="estado"> Disponible </span>
@@ -66,7 +66,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Porsche" data-año="2024">
 
   <img src="img-autos/Porsche Taycan Turbo S.png" alt="Porsche Taycan Turbo S ">
   <span class="estado"> Disponible </span>
@@ -82,7 +82,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Porsche" data-año="2022">
 
   <img src="img-autos/Porsche 718 Cayman GT4 .png" alt=" Porsche 718 Cayman GT4        ">
   <span class="estado"> Disponible </span>
@@ -97,11 +97,9 @@
   </div>
 </div>
 
+<div class="card" data-marca="Koenigsegg" data-año="2024">
 
-
-<div class="card">
-
-  <img src="img-autos/Koenigsegg Jesko.png" alt=" Koenigsegg Jesko        ">
+  <img src="img-autos/Koenigsegg Jesko.png" alt=" Koenigsegg Jesko">
   <span class="estado"> Disponible </span>
 
   <div class="info">
@@ -116,9 +114,9 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Koenigsegg" data-año="2023">
 
-  <img src="img-autos/Koenigsegg Gemera .png" alt="Koenigsegg Gemera         ">
+  <img src="img-autos/Koenigsegg Gemera .png" alt="Koenigsegg Gemera">
   <span class="estado"> Disponible </span>
 
   <div class="info">
@@ -132,9 +130,9 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Koenigsegg" data-año="2022">
 
-  <img src="img-autos/Koenigsegg Regera.png" alt="Koenigsegg Regera         ">
+  <img src="img-autos/Koenigsegg Regera.png" alt="Koenigsegg Regera ">
   <span class="estado"> Disponible </span>
 
   <div class="info">
@@ -148,7 +146,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Ferrari" data-año="2023">
 
   <img src="img-autos/Ferrari SF90 Stradale .png" alt="Ferrari SF90 Stradale         ">
   <span class="estado"> Disponible </span>
@@ -164,7 +162,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Ferrari" data-año="2022">
 
   <img src="img-autos/Ferrari 812 Superfast .png" alt="Ferrari 812 Superfast         ">
   <span class="estado"> Disponible </span>
@@ -179,7 +177,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-marca="Ferrari" data-año="2021">
 
   <img src="img-autos/Ferrari F8 Tributo .png" alt="Ferrari F8 Tributo         ">
   <span class="estado"> Disponible </span>
@@ -194,14 +192,14 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-marca="Lamborghini" data-año="2022">
 
   <img src="img-autos/Lamborghini Aventador SVJ.png" alt="Lamborghini Aventador SVJ         ">
   <span class="estado"> Disponible </span>
 
   <div class="info">
     <h2> Lamborghini Aventador SVJ </h2>
-    <p class="año"> Año: </p>
+    <p class="año"> Año:2022 </p>
     <p class="precio"> Precio: $3.500.000.000 </p>
      <a href="lamborghini-aventador-svj.html" class="btn-detalles">
   VER DETALLES
@@ -210,7 +208,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Lamborghini" data-año="2023">
 
   <img src="img-autos/Lamborghini Huracán STO .png" alt=" Lamborghini Huracán STO        ">
   <span class="estado"> Disponible </span>
@@ -226,7 +224,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="Lamborghini" data-año="2024">
 
   <img src="img-autos/Lamborghini Revuelto .png" alt=" Lamborghini Revuelto        ">
   <span class="estado"> Disponible </span>
@@ -241,7 +239,8 @@
   </div>
 </div>
 
-<div class="card">
+
+<div class="card" data-marca="McLaren" data-año="2022">
 
   <img src="img-autos/McLaren 720S.png" alt=" McLaren 720S        ">
   <span class="estado"> Disponible </span>
@@ -256,7 +255,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-marca="McLaren" data-año="2021">
 
   <img src="img-autos/McLaren P1.png" alt=" McLaren P1        ">
   <span class="estado"> Disponible </span>
@@ -272,7 +271,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="McLaren" data-año="2023">
 
   <img src="img-autos/McLaren Artura.png" alt=" McLaren Artura        ">
   <span class="estado"> Disponible </span>
@@ -288,7 +287,7 @@
 </div>
 
 
-<div class="card">
+<div class="card" data-marca="BMW" data-año="2023">
 
   <img src="img-autos/BMW M4 Competition.png" alt=" BMW M4 Competition        ">
   <span class="estado"> Disponible </span>
@@ -303,7 +302,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-marca="BMW" data-año="2021">
 
   <img src="img-autos/BMW i8.png" alt="  BMW i8       ">
   <span class="estado"> Disponible </span>
@@ -318,7 +317,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-marca="BMW" data-año="2022">
 
   <img src="img-autos/BMW M5 CS.png" alt="BMW M5 CS         ">
   <span class="estado"> Disponible </span>
@@ -365,6 +364,10 @@ fetch("navbar.html")
     });
 
 });
+
+</script>
+
+ <script src="js/autos.js">
 
 </script>
 </body>
