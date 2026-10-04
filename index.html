@@ -1,113 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="iconos/logo-E911.png" type="imagen/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ==========================================
+         FAVICON
+    =========================================== -->
+
+    <link rel="icon" href="iconos/logo-E911.png" type="image/x-icon" />
+
+    <!-- ==========================================
+         BOOTSTRAP
+    =========================================== -->
+
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <meta name="descripcion" content="Empire 911 - para los amantes de los autos deportivos, 
-    donde encontrarás información, noticias y contenido exclusivo sobre carros de alto rendimiento 
-    inspirados en el legendario Porsche 911." />
-    
-  
-    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- ==========================================
+         DESCRIPCIÓN
+    =========================================== -->
+
+    <meta
+      name="description"
+      content="Empire 911 - para los amantes de los autos deportivos, donde encontrarás información, noticias y contenido exclusivo sobre carros de alto rendimiento inspirados en el legendario Porsche 911."
+    />
+
+    <title>Empire 911</title>
+
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <script>
+      const sesionActiva = sessionStorage.getItem("sesionEmpire911");
+      if (!sesionActiva) {
+        window.location.replace("login.html");
+      }
+    </script>
   </head>
+
   <body>
     <div id="app">
+     
+
+      <div id="navbar"></div>
 
 
-<div id="navbar"></div> 
-  <section class="inicio">
-    <div class="overlay-inicio"></div>
-    <div class="contenido-inicio">
-      
-        <h1>EMPIRE <span>911</span></h1>
-        <h3>LUJO, POTENCIA, EXCLUSIVIDAD</h3>
-        <p>
-          Los mejores autos de lujo y alto rendimiento,
-          seleccionados para quienes exigen lo mejor.
-        </p>
-      <button class="btn-catalogo">
-        <a href="autos.html" class="vista autos"> VER CATÁLOGO <img src="iconos/right-gold.png" alt="right-gold"> </a> 
- 
-      </button>
+      <section class="inicio">
+        <div class="overlay-inicio"></div>
+
+        <div class="contenido-inicio">
+          <h1>
+            EMPIRE
+            <span>911</span>
+          </h1>
+
+          <h3>LUJO, POTENCIA, EXCLUSIVIDAD</h3>
+
+          <p>
+            Los mejores autos de lujo y alto rendimiento, seleccionados para
+            quienes exigen lo mejor.
+          </p>
+
+
+          <button class="btn-catalogo">
+            <a href="autos.html" class="vista autos">
+              VER CATÁLOGO
+
+              <img src="iconos/right-gold.png" alt="right-gold" />
+            </a>
+          </button>
+        </div>
+      </section>
+
+
+      <section class="caracteristicas">
+
+        <div class="caracteristica">
+          <img src="iconos/diamond-gold.png" alt="diamond-gold" />
+
+          <div>
+            <h4>EXCLUSIVIDAD</h4>
+
+            <p>Autos únicos para personas únicas.</p>
+          </div>
+        </div>
+
+
+        <div class="caracteristica">
+          <img src="iconos/trusted-gold.png" alt="trusted-gold" />
+
+          <div>
+            <h4>CALIDAD</h4>
+
+            <p>Vehículos inspeccionados y garantizados.</p>
+          </div>
+        </div>
+
+
+        <div class="caracteristica">
+          <img src="iconos/location-gold.png" alt="location-gold" />
+
+          <div>
+            <h4>DISPONIBILIDAD</h4>
+
+            <p>Autos disponibles en las mejores ciudades.</p>
+          </div>
+        </div>
+
+        <div class="caracteristica">
+          <img src="iconos/check-gold.png" alt="check-gold" />
+
+          <div>
+            <h4>CONFIANZA</h4>
+
+            <p>Transparencia y respaldo en cada compra.</p>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section class="caracteristicas">
-    <div class="caracteristica">
-      <img src="iconos/diamond-gold.png" alt="diamond-gold">
-      <div>
-        <h4>EXCLUSIVIDAD</h4>
-        <p>Autos únicos para personas únicas.</p>
-      </div>
-    </div>
-
-    <div class="caracteristica">
-      <img src="iconos/trusted-gold.png" alt="trusted-gold">
-      <div>
-        <h4>CALIDAD</h4>
-        <p>Vehículos inspeccionados y garantizados.</p>
-      </div>
-    </div>
-
-    <div class="caracteristica">
-      <img src="iconos/location-gold.png" alt="location-gold">
-      <div>
-        <h4>DISPONIBILIDAD</h4>
-        <p>Autos disponibles en las mejores ciudades.</p>
-      </div>
-    </div>
-
-    <div class="caracteristica">
-      <img src="iconos/check-gold.png" alt="check-gold">
-      <div>
-        <h4>CONFIANZA</h4>
-        <p>Transparencia y respaldo en cada compra.</p>
-      </div>
-    </div>
-
-    
-  </section>
-
-
-    <!--<script type="module" src="/src/main.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>-->
 
     <script>
 
-fetch("navbar.html") //solicita info
-.then(response => response.text())
-.then(data => {
+      function cerrarSesion() {
+        sessionStorage.removeItem("sesionEmpire911");
+        window.location.replace("login.html");
+      }
 
-    document.getElementById("navbar").innerHTML = data;
+      fetch("navbar.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar navbar.html");
+          }
+          return response.text();
+        })
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
 
-    const enlaces = document.querySelectorAll(".enlace-rebelde"); //guarda elementos en enlaces
 
-    let paginaActual = window.location.pathname; //obten ruta de pag en la que estoy actualmente y guardar
+          const btnUser = document.getElementById("btnUser");
+          const menuDropdown = document.getElementById("menuDropdown");
 
-    enlaces.forEach(enlace => { //hace algo con cada uno de los enlaces
+          if (btnUser && menuDropdown) {
+            btnUser.addEventListener("click", function (e) {
+              e.stopPropagation();
+              if (menuDropdown.style.display === "block") {
+                menuDropdown.style.display = "none";
+              } else {
+                menuDropdown.style.display = "block";
+              }
+            });
 
-        const href = enlace.getAttribute("href"); //obten el valor del atributo "href"
+            window.addEventListener("click", function () {
+              menuDropdown.style.display = "none";
+            });
+          }
 
-        if (paginaActual.includes(href)) {
-            enlace.parentElement.classList.add("activo"); //"/autos.html", contiene "autos.html"?
-        }
+          const enlaces = document.querySelectorAll(".enlace-rebelde");
+          const paginaActual = window.location.pathname;
 
-        // caso especial para inicio
-        if (
-            (paginaActual.endsWith("/") || paginaActual.includes("index.html"))
-            && href === "index.html"
-        ) {
-            enlace.parentElement.classList.add("activo");
-        }
+          enlaces.forEach((enlace) => {
+            const href = enlace.getAttribute("href");
 
-    });
+            if (href && paginaActual.includes(href)) {
+              enlace.parentElement.classList.add("activo");
+            }
 
-});
-
+            if (
+              (paginaActual.endsWith("/") ||
+                paginaActual.includes("index.html")) &&
+              href === "index.html"
+            ) {
+              enlace.parentElement.classList.add("activo");
+            }
+          });
+        })
+        .catch((error) => {
+          console.error("Error al cargar el navbar:", error);
+        });
     </script>
-</body>
+  </body>
 </html>

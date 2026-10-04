@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: white;
+    cursor: default;
+}
+
+input, textarea {
+    cursor: text;
+}
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-background {
+    position: absolute;
+    inset: 0;
+    background-image: url("../img-autos/Porsche 911 GT3 RS - gold.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.login-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        );
+    z-index: 1;
+}
+
+.login-container {
+    width: 76%;
+    max-width: 1100px;
+    min-height: 315px;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 25px;
+}
+
+.login-info {
+    padding: 10px 30px;
+}
+
+.login-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+.login-info h1 {
+    color: #D0A052;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.login-info h1 span {
+    color: #D0A052;
+}
+
+.login-info p {
+    width: 330px;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 330px;
+    min-height: 265px;
+    justify-self: center;
+    padding: 15px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    background: rgba(75, 75, 75, 0.50);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-icon-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.user-head {
+    width: 13px;
+    height: 13px;
+    background: #555;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.user-body {
+    width: 25px;
+    height: 13px;
+    background: #555;
+    border-radius: 15px 15px 5px 5px;
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+}
+
+.login-box h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#loginForm {
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #D0A052;
+    outline: none;
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.input-group label {
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    color: #ccc;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -10px;
+    font-size: 10px;
+    color: #D0A052;
+}
+
+.btn-login {
+    display: block;
+    margin: 5px auto 0;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #D0A052;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #e0b46c;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(208, 160, 82, 0.3);
+}
+
+#mensaje-login {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 10px;
+    min-height: 15px;
+    color: #ff7777;
+}
+
+@media (max-width: 900px) {
+    .login-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .login-info {
+        text-align: center;
+    }
+
+    .login-info p {
+        margin: auto;
+    }
+
+    .login-box {
+        max-width: 350px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .login-container {
+        width: 92%;
+        padding: 25px 15px;
+    }
+
+    .login-info {
+        padding: 0;
+    }
+
+    .login-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .login-info h1 {
+        font-size: 32px;
+    }
+
+    .login-info p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .login-box {
+        padding: 15px 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .login-container {
+        width: 95%;
+    }
+
+    .login-info h1 {
+        font-size: 28px;
+    }
+
+    .login-box {
+        max-width: 100%;
+    }
+}

@@ -1,9 +1,8 @@
 <header class="navbar">
-
 <nav class="menu">
-  <div class= "logo">
-<img src="iconos/logo-E911.png" alt="Empire 911">
-</div>
+  <div class="logo">
+    <img src="iconos/logo-E911.png" alt="Empire 911">
+  </div>
 
   <div class="menu-derecha">
     <ul>
@@ -13,16 +12,43 @@
       <li><a href="contacto.html" class="enlace-rebelde"> CONTACTO </a></li> 
     </ul>
 
-
-
-    <div class= "icono-whatsapp">
+    <div class="icono-whatsapp">
       <a href="https://wa.me/573506299346?text=Hola%20quiero%20información%20sobre%20los%20autos%20de%20Empire%20911" target="_blank">
         <img src="iconos/whatsapp-green.png" alt="Whatsapp">
       </a>
     </div>
-    <div class="icono-user">
-      <img src="iconos/user-login-gold.png" alt="user login">
+
+    <div class="usuario-wrapper">
+      <div class="icono-user" id="btnUser" style="cursor: pointer;">
+        <img src="iconos/user-login-gold.png" alt="user login">
+      </div>
+
+      <div class="dropdown-sesion" id="menuDropdown">
+        <div class="dropdown-iconos-top">
+          <div class="dropdown-usr">
+            <img src="iconos/user-login-gold.png" alt="user login">
+          </div>
+        </div>
+        
+        <div class="dropdown-link-container">
+          <a href="#" onclick="cerrarSesion(); return false;">Cerrar sesión</a>
+        </div>
+      </div>
     </div>
+
   </div>
 </nav>
 </header>
+
+<script>
+  document.querySelector('.icono-user-container').addEventListener('click', function(e) {
+    const dropdown = this.querySelector('.dropdown-sesion');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    e.stopPropagation();
+  });
+
+  window.addEventListener('click', function() {
+    const dropdown = document.querySelector('.dropdown-sesion');
+    if (dropdown) dropdown.style.display = 'none';
+  });
+</script>

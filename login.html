@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="iconos/logo-E911.png" type="image/x-icon">
+    <meta name="description" content="Empire 911 - Inicio de sesión">
+    <title>Login | Empire 911</title>
+    <link rel="stylesheet" href="assets/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+
+        <div class="login-background"></div>
+        <div class="login-overlay"></div>
+
+
+        <section class="login-container">
+
+
+            <div class="login-info">
+                <img src="iconos/logo-E911.png" alt="Empire 911" class="login-logo">
+                <h1>
+                    Bienvenidos<span>!</span>
+                </h1>
+                <p>
+                    Los mejores autos de lujo y alto
+                    rendimiento, seleccionados para quienes
+                    exigen lo mejor.
+                </p>
+            </div>
+
+            <div class="login-box">
+
+                <div class="user-icon-container">
+                    <img src="iconos/user-login-gold.png" alt="Usuario" class="user-icon-img">
+                </div>
+
+                <h2>
+                    INICIAR SESIÓN
+                </h2>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <input type="email" id="correo" autocomplete="email" required>
+                        <label for="correo">
+                            Correo Electrónico
+                        </label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="contrasena" autocomplete="current-password" required>
+                        <label for="contrasena">
+                            Contraseña
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        INICIAR SESIÓN
+                    </button>
+
+                    <p id="mensaje-login"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

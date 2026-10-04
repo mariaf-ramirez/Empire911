@@ -8,6 +8,11 @@ font-family: Arial, Helvetica, sans-serif;
 body{
 background: #0A0A0A;
 color:white;
+cursor: default;
+}
+
+input, textarea {
+    cursor: text;
 }
 
 a { 
@@ -90,7 +95,75 @@ height: 25px;
 cursor:pointer;
 }
 
-/* INICIO */
+.icono-user button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icono-user button img {
+    display: block;
+}
+
+.usuario-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.icono-user {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-sesion {
+    display: none;
+    position: absolute;
+    right: -30px;
+    top: -10px;
+    background: #0A0A0A;
+    border: 1px solid #D0A052;
+    border-radius: 12px;
+    padding: 10px 0;
+    width: 180px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+}
+
+.dropdown-iconos-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.dropdown-iconos-top img {
+    width: 26px;
+    height: 26px;
+    margin-left: 100px;
+}
+
+.dropdown-link-container {
+    text-align: center;
+}
+
+.dropdown-sesion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-sesion a:hover {
+    color: #D0A052;
+    text-decoration: none;
+}
 
 .inicio{
 height:80vh;
@@ -147,7 +220,7 @@ font-size: 14px;
 margin-left: 5px;
 }
 
-/* BOTON */
+
 button a{
 color: #D0A052;
 text-decoration:none;
@@ -189,7 +262,6 @@ color:#FFFFFF;
 text-decoration:none;
 }
 
-/* CARACTERISTICAS */
 
 .caracteristicas{
 margin: 20px 40px;
@@ -209,7 +281,7 @@ gap: 15px;
 padding: 0 20px 0 20px;
 }
 
-/* lineas separadoras */
+
 .caracteristica:not(:last-child){
 border-right: 1px solid #D0A052;
 }
@@ -237,11 +309,7 @@ color:#D0A052;
 color: white;
 }
 
-/* RESPONSIVE */
-
-
 @media (max-width: 1024px){
-
     .navbar{
         padding: 15px 20px;
     }
